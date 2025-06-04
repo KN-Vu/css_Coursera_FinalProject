@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+/* -------- Header -------- */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: black;
+    border: 3px rgb(255, 0, 0) solid;
+    padding: 10px;
+}
+
+header .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Paprika", system-ui;
+}
+
+header .logo img {
+    height: 40px;
+    width: auto
+}
+
+.skip {
+    font-size: 30px;
+    padding: 10px;
+    background-color: white;
+    color: blue;
+    text-decoration: none;
+
+    z-index: -10;
+}
+
+.skip:focus:focus-visible {
+    border: none;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.links a {
+    color: white;
+    background-color: red;
+    border: 2px white dashed;
+    border-radius: 20px;
+    padding: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    color: blue;
+    text-shadow:
+        -1px -1px 0 #bebebe,
+        1px -1px 0 #bebebe,
+        -1px 1px 0 #bebebe,
+        1px 1px 0 #bebebe;
+}
+
+/* -------- Main body -------- */
+
+/* ~~~~ Main ~~~~ */
+
+.img_filler img{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+main h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 50px;
+
+    color: yellow;
+}
+
+.container {
+    display: grid;
+    grid: 100px 150px 100px / auto auto auto;
+    margin: 20px;
+}
+
+.container h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color: orange;
+}
+
+.container .column {
+    margin: 15px;
+    font-family: cursive;
+}
+
+.container .column p {
+    background-color: orangered;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border: 2px white groove;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+.container img:hover {
+    opacity: 60%;
+}
+
+/* ~~~~ Movies ~~~~ */
+.booking {
+    color: white;
+    font-size: 40px;
+    /* display: flex; */
+}
+
+.price {
+    color: yellow;
+    font-style: italic;
+}
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.posters img {
+    width: 300px;
+    height: auto;
+    margin: 15px;
+}
+
+.poster_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.poster_item p {
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+    color: black;
+    border: 1px black dashed;
+    border-radius: 5px;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.poster_item img:hover + p {
+    opacity: 100%;
+    transform: translateY(25px);
+}
+
+/* ~~~~ Location ~~~~ */
+
+main li {
+    list-style: upper-roman;
+    margin: 30px;
+}
+
+.location_img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin: 30px;
+}
+
+.location_img a {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.location_img img {
+    display: block;
+    width: 30%;
+    min-width: 300px;
+    max-height: 300px;
+}
+
+.location_img a:focus img, .location_img a:hover img {
+    border-color: blue;
+}
+
+main li:nth-of-type(odd) {
+    color: orange;
+    font-style: italic;
+    font-weight: bold;
+}
+
+main li:nth-of-type(even) {
+    color: yellow;
+    text-decoration: underline;
+}
+
+main .location_img a:nth-of-type(odd) img {
+    border: 5px orange solid;
+    border-radius: 10px;
+}
+
+main .location_img a:nth-of-type(even) img {
+    border: 5px yellow dashed;
+    border-radius: 50px;
+}
